@@ -1,8 +1,8 @@
 {{ config(materialized="view") }}
 with
-    customers as (select * from {{ ref("stg_customers") }}),
+    customers as (select * from {{ ref("stg_jaffle_shop__customers") }}),
 
-    orders as (select * from {{ ref("stg_orders") }}),
+    orders as (select * from {{ ref("stg_jaffle_shop__orders") }}),
 
     customer_orders as (
 
